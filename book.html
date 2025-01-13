@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div>
+                <h2>Tax Invoice</h2>
+            </div>
+            <div>
+                <p>Order Id: OD331057097080448100</p>
+                <p>Order Date: 21-04-2024, 09:37 PM</p>
+            </div>
+            <div>
+                <p>Invoice No: FAAA3P2500002649</p>
+                <p>Invoice Date: 21-04-2024, 09:38 PM</p>
+            </div>
+            <div>
+                <p>GSTIN: UNREGISTERED</p>
+                <p>PAN: BWQPS8149K</p>
+            </div>
+        </div>
+
+        <div class="address-info">
+            <div class="address-block">
+                <h4>Sold By</h4>
+                <p>Neha Publishers & Distributors Khasara No 189, Near Rana Complex to 1st Floor,Rithala Landmark:
+                    Rithala Landmark: Rana Complex District : NORTH, WEST DELHI State : Delhi, NEW DELHI - 110085, GST:
+                    UNREGISTERED</p>
+            </div>
+            <div class="address-block">
+                <h4>Shipping Address</h4>
+                <p>M V Sowndapan, M2P Fintech, C1 & C56, Thiru Vi Ka Industrial Estate, SIDCO, Guindy, Olympia quest,
+                    Chennai - 600032, IN-TN</p>
+            </div>
+            <div class="address-block">
+                <h4>Billing Address</h4>
+                <p>M V Sowndapan, M2P Fintech, C1 & C56, Thiru Vi Ka Industrial Estate, SIDCO, Guindy, Olympia quest,
+                    Chennai - 600032, IN-TN</p>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                        <th>Gross Amount</th>
+                        <th>Discount</th>
+                        <th>Taxable Value</th>
+                        <th>IGST</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Silva Mind Control Method Paperback Simon & Schuster Silva Jose</td>
+                        <td>English | 9780671739898</td>
+                        <td>1</td>
+                        <td>225.00</td>
+                        <td>0.00</td>
+                        <td>225.00</td>
+                        <td>0.00</td>
+                        <td>225.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Shipping and Handling Charges</td>
+                        <td>0.00</td>
+                        <td>60.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-info">
+            <p>Total Price: 285.00</p>
+            <p>All values are in INR</p>
+        </div>
+
+        <div class="footer">
+            <p>Seller Registered Address: Neha Publishers & Distributors,</p>
+            <p>Khasara No 1143/2, Ground Floor, Rithala Village, Rithala,New Delhi, NEW DELHI - 110085.</p>
+            <p>Declaration: The goods sold are intended for end user consumption and not for resale.</p>
+            <p>E. & O.E.</p>
+            <p>Ordered Through</p>
+            <p>Neha Publishers & Distributors</p>
+            <p>Authorized Signature</p>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .invoice-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5px;
+        border: 1px solid #000;
+    }
+
+    .invoice-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* gap: 10px; */
+        align-items: start;
+        border-bottom: 1px solid #000;
+        /* padding-bottom: 10px; */
+    }
+
+
+    /* .left,
+    .right {
+        width: 48%;
+    }
+
+    .right {
+        text-align: right;
+    } */
+
+    .address-info {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .address-block {
+        width: 32%;
+    }
+
+    .product-info table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .product-info table,
+    .product-info th,
+    .product-info td {
+        border: 1px solid #000;
+    }
+
+    .product-info th,
+    .product-info td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .product-info th {
+        background-color: #f2f2f2;
+    }
+
+    .total-info {
+        padding: 10px;
+        text-align: right;
+        border-bottom: 1px solid #000;
+    }
+
+    .total-info p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer p {
+        margin: 5px 0;
+    }
+</style>
+
+</html>

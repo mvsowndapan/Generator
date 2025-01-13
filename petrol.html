@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Receipt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 560;
+            /* Added padding for spacing */
+            height: auto;
+            /* Changed from 100vh to auto */
+            padding: 20px;
+            /* Added padding for spacing */
+            overflow: auto;
+        }
+
+        .foggy-bold-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .receipt-container {
+            background-color: #FBFBFB;
+            width: 265px;
+            /* Adjusted width for better spacing */
+            padding: 5px;
+            /* Reduced padding for even spacing */
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 5px;
+            /* Added margin for spacing between receipts */
+            display: flex;
+            flex-direction: column;
+            /* Use flex to arrange elements */
+            justify-content: space-between;
+            /* Evenly space children */
+            height: auto;
+            /* Let the container adjust based on content */
+            overflow: hidden;
+        }
+
+        .logo-img {
+            width: 80px;
+            /* margin-bottom: 15px; */
+            /* Added margin below the logo */
+        }
+
+        .heading {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 5px;
+            /* Adjusted margin for spacing */
+            transform: scaleY(1.5);
+            /* Reduced scaling */
+            transform-origin: top;
+        }
+
+        .header {
+            text-align: left;
+            font-size: 14px;
+            /* Adjusted font size */
+            /* margin-bottom: 10px; */
+            /* Adjusted margin for spacing */
+        }
+
+        .header-footer {
+            text-align: center;
+            font-size: 15px;
+            /* margin-bottom: 10px; */
+            /* Added margin for spacing */
+        }
+
+        .transaction-details,
+        .fuel-details {
+            font-size: 14px;
+            text-align: left;
+            /* margin-bottom: 10px; */
+            /* Added margin for spacing */
+        }
+
+        .footer p {
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: auto;
+            /* Push the footer to the bottom */
+        }
+
+        /* Ensure receipts stack correctly in smaller screens */
+        @media (max-width: 400px) {
+            .receipt-container {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+
+        .receipt-space {
+            margin-bottom: 250px;
+            /* Add space below every second receipt */
+        }
+    </style>
+</head>
+
+<body>
+    <% receiptData.forEach(function(receipt, index) { %>
+        <div class="receipt-container <%= (index % 2 === 1) ? 'receipt-space' : '' %>">
+            <!-- Logo and Agency Name -->
+            <div class="logo">
+                <img src=<%=imageLogo %> alt="Bharat Petroleum" class="logo-img" />
+            </div>
+            <div class="heading">
+                <p>
+                    <%= receipt.agency.name %>
+                </p>
+            </div>
+            <div class="header">
+                <p>
+                    <%= receipt.agency.dealer %>
+                </p>
+                <p>
+                    <%= receipt.agency.address %>
+                </p>
+                <p>PHONE NO: <%= receipt.agency.phone %>
+                </p>
+                <p>GST: <%= receipt.agency.gst %>
+                </p>
+            </div>
+            <div class="header-footer">
+                <p><strong>
+                        <%= receipt.documentType %>
+                    </strong></p>
+            </div>
+
+            <!-- Transaction Details -->
+            <div class="transaction-details">
+                <p>*****************************</p>
+                <p>
+                    <%= receipt.transactionDetails.date %>
+                        <%= receipt.transactionDetails.time %>
+                </p>
+                <p>TXN NO : <%= receipt.transactionDetails.transactionNumber %>
+                </p>
+                <p>INVOICE NO : <%= receipt.transactionDetails.invoiceNumber %>
+                </p>
+                <p>VEHICLE NO : <%= receipt.transactionDetails.vehicleNumber %>
+                </p>
+                <!-- <p>PRESET : <%= receipt.transactionDetails.preset %> -->
+                </p>
+                <p>*****************************</p>
+            </div>
+
+            <!-- Fueling Details -->
+            <div class="fuel-details">
+                <p>NOZZLE NO : <%= receipt.fuelingDetails.nozzleNumber %>
+                </p>
+                <p>PRODUCT : <%= receipt.fuelingDetails.product %>
+                </p>
+                <p>DENSITY : <%= receipt.fuelingDetails.density %>
+                </p>
+                <p>RATE : <%= receipt.fuelingDetails.rate %>
+                </p>
+                <p>VOLUME : <%= receipt.fuelingDetails.volume %>
+                </p>
+                <p>AMOUNT : <%= receipt.fuelingDetails.amount %>
+                </p>
+                <p>*****************************</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Thank You! Visit Again</p>
+            </div>
+        </div>
+        <% }); %>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Receipt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            /* Changed from 100vh to auto */
+            padding: 20px;
+            /* Added padding for spacing */
+            overflow: auto;
+            /* Allow scrolling if needed */
+        }
+
+        .foggy-bold-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .receipt-container {
+            background-color: #FBFBFB;
+            width: 300px;
+            /* Fixed width for receipts */
+            padding: 15px;
+            /* Reduced padding for even spacing */
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            /* Added margin for spacing between receipts */
+            display: flex;
+            flex-direction: column;
+            /* Use flex to arrange elements */
+            justify-content: space-between;
+            /* Evenly space children */
+            height: auto;
+            /* Let the container adjust based on content */
+            overflow: hidden;
+            /* Prevent overflow */
+        }
+
+        .logo-img {
+            width: 80px;
+            margin-bottom: 15px;
+            /* Added margin below the logo */
+        }
+
+        .heading {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+            /* Adjusted margin for spacing */
+            transform: scaleY(1.5);
+            /* Reduced scaling */
+            transform-origin: top;
+        }
+
+        .header {
+            text-align: left;
+            font-size: 14px;
+            /* Adjusted font size */
+            margin-bottom: 10px;
+            /* Adjusted margin for spacing */
+        }
+
+        .header-footer {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 10px;
+            /* Added margin for spacing */
+        }
+
+        .transaction-details,
+        .fuel-details {
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 10px;
+            /* Added margin for spacing */
+        }
+
+        .footer p {
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: auto;
+            /* Push the footer to the bottom */
+        }
+
+        /* Ensure receipts stack correctly in smaller screens */
+        @media (max-width: 400px) {
+            .receipt-container {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="receipt-container">
+        <div class="logo">
+            <img src="bharatPetroleum.png" alt="Bharat Petroleum" class="logo-img" />
+        </div>
+        <div class="heading">
+            <p>SHREE BAGYAM AGENCY</p>
+        </div>
+        <div class="header">
+            <p>BPCL DEALER</p>
+            <p>SATHY ROAD GANAPATHY, COIMBATORE - 641006</p>
+            <p>PHONE NO: 0422-2510992</p>
+            <p>GST: 33ABSFS5069G1ZQ</p>
+        </div>
+        <div class="header-footer">
+            <p><strong>ORIGINAL</strong></p>
+        </div>
+        <div class="transaction-details">
+            <p>*****************************</p>
+            <p>29/09/2024 03:59:14</p>
+            <p>TXN NO : 7163854209</p>
+            <p>INVOICE NO : 3718235</p>
+            <p>VEHICLE NO : NOT ENTERED</p>
+            <p>*****************************</p>
+        </div>
+        <div class="fuel-details">
+            <p>NOZZLE NO : 2</p>
+            <p>PRODUCT : PETROL</p>
+            <p>DENSITY : 752.3 kg/m3</p>
+            <p>RATE : 116.39 INR/Ltr</p>
+            <p>VOLUME : 11.26 Ltr</p>
+            <p>AMOUNT : 1310.55 INR</p>
+            <p>*****************************</p>
+        </div>
+        <div class="footer">
+            <p>Thank You! Visit Again</p>
+        </div>
+    </div>
+
+    <!-- Additional receipt containers go here, maintaining the same structure -->
+
+    <div class="receipt-container">
+        <div class="logo">
+            <img src="bharatPetroleum.png" alt="Bharat Petroleum" class="logo-img" />
+        </div>
+        <div class="heading">
+            <p>SRI SARAVANA AGENCIES</p>
+        </div>
+        <div class="header">
+            <p>828/2, KULATHUPALAYAM, THONDAMUTHUR PO. COIMBATORE - 641109</p>
+            <p>PHONE NO: 0422-2617313</p>
+            <p>GST: 33BFMPS7553E1Z5</p>
+        </div>
+        <div class="header-footer">
+            <p><strong>ORIGINAL</strong></p>
+        </div>
+        <div class="transaction-details">
+            <p>*****************************</p>
+            <p>13/02/2024 18:04:25</p>
+            <p>TXN NO : 7801340029</p>
+            <p>INVOICE NO : 3986966</p>
+            <p>VEHICLE NO : NOT ENTERED</p>
+            <p>*****************************</p>
+        </div>
+        <div class="fuel-details">
+            <p>NOZZLE NO : 2</p>
+            <p>PRODUCT : PETROL</p>
+            <p>DENSITY : 752.2 kg/m3</p>
+            <p>RATE : 108.49 INR/Ltr</p>
+            <p>VOLUME : 18.60 Ltr</p>
+            <p>AMOUNT : 2017.91 INR</p>
+            <p>*****************************</p>
+        </div>
+        <div class="footer">
+            <p>Thank You! Visit Again</p>
+        </div>
+    </div>
+
+    <!-- Add more receipt containers here following the same structure as above -->
+
+    <!-- Repeat the structure for each receipt as necessary -->
+
+    <div class="receipt-container">
+        <div class="logo">
+            <img src="bharatPetroleum.png" alt="Bharat Petroleum" class="logo-img" />
+        </div>
+        <div class="heading">
+            <p>SRI SARAVANA AGENCIES</p>
+        </div>
+        <div class="header">
+            <p>828/2, KULATHUPALAYAM, THONDAMUTHUR PO. COIMBATORE - 641109</p>
+            <p>PHONE NO: 0422-2617313</p>
+            <p>GST: 33BFMPS7553E1Z5</p>
+        </div>
+        <div class="header-footer">
+            <p><strong>ORIGINAL</strong></p>
+        </div>
+        <div class="transaction-details">
+            <p>*****************************</p>
+            <p>13/02/2024 18:04:25</p>
+            <p>TXN NO : 7801340029</p>
+            <p>INVOICE NO : 3986966</p>
+            <p>VEHICLE NO : NOT ENTERED</p>
+            <p>*****************************</p>
+        </div>
+        <div class="fuel-details">
+            <p>NOZZLE NO : 2</p>
+            <p>PRODUCT : PETROL</p>
+            <p>DENSITY : 752.2 kg/m3</p>
+            <p>RATE : 108.49 INR/Ltr</p>
+            <p>VOLUME : 18.60 Ltr</p>
+            <p>AMOUNT : 2017.91 INR</p>
+            <p>*****************************</p>
+        </div>
+        <div class="footer">
+            <p>Thank You! Visit Again</p>
+        </div>
+    </div>
+
+    <div class="receipt-container">
+        <div class="logo">
+            <img src="bharatPetroleum.png" alt="Bharat Petroleum" class="logo-img" />
+        </div>
+        <div class="heading">
+            <p>SRI SARAVANA AGENCIES</p>
+        </div>
+        <div class="header">
+            <p>828/2, KULATHUPALAYAM, THONDAMUTHUR PO. COIMBATORE - 641109</p>
+            <p>PHONE NO: 0422-2617313</p>
+            <p>GST: 33BFMPS7553E1Z5</p>
+        </div>
+        <div class="header-footer">
+            <p><strong>ORIGINAL</strong></p>
+        </div>
+        <div class="transaction-details">
+            <p>*****************************</p>
+            <p>13/02/2024 18:04:25</p>
+            <p>TXN NO : 7801340029</p>
+            <p>INVOICE NO : 3986966</p>
+            <p>VEHICLE NO : NOT ENTERED</p>
+            <p>*****************************</p>
+        </div>
+        <div class="fuel-details">
+            <p>NOZZLE NO : 2</p>
+            <p>PRODUCT : PETROL</p>
+            <p>DENSITY : 752.2 kg/m3</p>
+            <p>RATE : 108.49 INR/Ltr</p>
+            <p>VOLUME : 18.60 Ltr</p>
+            <p>AMOUNT : 2017.91 INR</p>
+            <p>*****************************</p>
+        </div>
+        <div class="footer">
+            <p>Thank You! Visit Again</p>
+        </div>
+    </div>
+</body>
+
+</html>
